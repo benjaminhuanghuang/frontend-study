@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .HolyGrail {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        margin: 0
+    }
+
+    header,
+    footer {
+        background: gray;
+        height:5vh;
+    }
+
+    .HolyGrail-body {
+        display: flex;
+        flex: 1;
+    }
+
+    .HolyGrail-content {
+        flex: 1;
+    }
+
+    .HolyGrail-nav,
+    .HolyGrail-ads {
+        /* 两个边栏的宽度设为12em */
+        flex: 0 0 12em;
+        background:blueviolet
+    }
+
+    .HolyGrail-nav {
+        /* 导航放到最左边 */
+        order: -1;
+    }
+</style>
+
+<body class="HolyGrail">
+    <header>Header</header>
+    <div class="HolyGrail-body">
+        <main class="HolyGrail-content">Content</main>
+        <nav class="HolyGrail-nav">...</nav>
+        <aside class="HolyGrail-ads">...</aside>
+    </div>
+    <footer>Footer</footer>
+</body>
+
+</html>
