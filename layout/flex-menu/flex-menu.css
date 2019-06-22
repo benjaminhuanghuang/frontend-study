@@ -1,0 +1,8 @@
+header {
+    display: flex;
+}
+
+/* add style to 3th div in header */
+header > div:nth-​​child（3） {
+    margin-left: auto;
+}

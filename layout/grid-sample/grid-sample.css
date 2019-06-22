@@ -1,0 +1,32 @@
+body{
+    margin: 0px;
+}
+
+.container {
+    display: grid;    
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 350px 50px;
+}
+
+
+header {
+    grid-column: span 12;
+    display: flex;
+    background-color: gray
+}
+aside {
+    grid-column: span 2;
+    background-color: green
+}
+main {
+    grid-column: span 10;
+    background-color: blue
+}
+footer {
+    grid-column: span 12;
+    background-color: gold
+}
+
+header > div:nth-child(3) {
+    margin-left: auto;
+}
