@@ -1,8 +1,14 @@
+body {
+    margin: 0px;
+}
+
 header {
     display: flex;
+    background-color: bisque;
 }
 
 /* add style to 3th div in header */
-header > div:nth-​​child（3） {
+header > div:nth-child(3){
     margin-left: auto;
+    background-color: greenyellow
 }
