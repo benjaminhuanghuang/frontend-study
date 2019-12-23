@@ -1,0 +1,93 @@
+<html>
+
+<head>
+  <title>Form Validation and Animations</title>
+  <style>
+    #container {
+      width: 400px;
+      background-color: #EEE;
+      padding: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #666;
+    }
+
+    h1,
+    label,
+    input {
+      font-family: sans-serif;
+    }
+
+    button {
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px;
+      margin-top: 15px;
+      display: block;
+      background-color: #FFCC00;
+      border: 2px #333 solid;
+    }
+
+    button:hover {
+      background-color: lime;
+    }
+
+    button:active {
+      background-color: limegreen;
+    }
+
+    input {
+      font-size: 16px;
+      padding: 10px;
+      width: 350px;
+      border: 2px #333 solid;
+    }
+
+    input.error{
+      border: 2px #E2928C solid;
+      animation: glow 1s ease-out infinite alternate;
+    }
+
+    @keyframes glow{
+      from{
+        box-shadow: 0px 0px 0px 3px #E3655B
+      }
+      to{
+        box-shadow: 0px 0px 20px 3px #E3655B
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Contact Us</h1>
+    <form novalidate>
+      <label for="choose">What is your e-mail address?</label>
+      <input tabindex="1" type="email" id="email" name="mail">
+      <button tabindex="2" id="submit">Submit</button>
+    </form>
+  </div>
+  <script>
+  var email = document.querySelector("#email");
+  var submit = document.querySelector("#submit");
+  email.addEventListener("blur", checkEmail, false);
+
+  function checkEmail(e)
+  {
+    if(email.validity.valid){
+      email.classList.remove('error');
+    }
+    else{
+      email.classList.add('error');
+    }
+  }
+  
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <title>CSS Sprite Animation</title>
+  <style>
+    #spriteContainer {
+      width: 300px;
+      height: 300px;
+      display: block;
+      background-image: url("https://www.kirupa.com/images/sprites_final.png");
+      animation: sprite 0.8s steps(24) infinite
+    }
+
+    @keyframes sprite {
+      100% {
+        background-position: -7224px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="spriteContainer"></div>
+</body>
+
+</html>
