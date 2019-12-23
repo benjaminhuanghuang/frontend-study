@@ -2,7 +2,7 @@
 
 
 
-## VS Extension css
+## VS Extension for CSS and HTML
 - Live server
 - Live Sass Compiler
 - Auto Rename Tag
