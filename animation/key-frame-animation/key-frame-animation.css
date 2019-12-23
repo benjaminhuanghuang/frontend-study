@@ -1,0 +1,17 @@
+
+.App-logo {
+  /* Relative to 1% of viewport's* smaller dimension */
+  height: 40vmin;
+  /* pointer-events hover/focus/active 等动态效果 */
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
