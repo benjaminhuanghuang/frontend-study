@@ -27,23 +27,25 @@
 
 
 
-.parent {
-  padding: 5px;
-  background-color: #00AAFF;
+.box {
+  width: 500px;
+  height: 500;
+  border: 5px solid black;
+
+  position: relative;  /*item1 absolute based on box if box positon is relative*/
 }
 
-.child {
-  padding: 5px;
+.item1, .item2 {
+  width: 200px;
+  height: 200;
 }
 
-.child-one {
+.item1 {
   background-color: rgb(116, 255, 116);
+  position: absolute;
+  right:0px
 }
 
-.child-two {
+.item2 {
   background-color: rgb(248, 117, 117);
-}
-
-.child-three {
-  background-color: rgb(255, 116, 232);
 }
