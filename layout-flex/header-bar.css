@@ -1,0 +1,54 @@
+.parent{
+
+}
+
+.child-one{
+  /* position: relative;
+  left: 10px;
+  top:10px */
+
+
+  position: absolute;
+}
+
+.child-two{
+  
+}
+
+.child-three{
+  
+}
+
+
+
+
+
+
+
+
+
+.header-bar {
+  display: flex;
+  border: 5px solid black;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-menu, .center-title {
+  width: 200px;
+  height: 200;
+}
+
+.left-menu {
+  background-color: rgb(116, 255, 116);
+  position: absolute;
+  left: 0px;
+}
+
+.center-title{
+  background-color: rgb(248, 117, 117);
+  /* justify-self: center */
+  /* position: relative;
+  margin-right: auto; */
+}
