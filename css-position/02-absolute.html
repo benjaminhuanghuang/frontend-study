@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position: Absolute
+  </title>
+  <style>
+     .other {
+      width: 750px;
+      height: 500px;
+      background-color: blue;
+    }
+    .absolute {
+      position: absolute;
+      width: 350px;
+      height: 360px;
+      background-color: red;
+      right:80px;
+      bottom:60px
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="other">
+      other
+    </div>
+    <div class="absolute">
+      absolute: 
+      Remove the element from the document flow 
+      if an absolute positioned element has no positioned ancestors, it uses the document body, 
+      and moves along with page scrolling.
+    </div>
+    <div class="other">
+      other
+    </div>
+    <div class="other">
+      other
+    </div>
+    <div class="other">
+      other
+    </div>
+  </div>
+
+</body>
+
+</html>

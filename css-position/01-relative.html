@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position: Relative
+  </title>
+  <style>
+    .relative {
+      position: relative;
+      width: 350px;
+      height: 360px;
+      background-color: red;
+      top: -100px;
+      left: 100px
+    }
+
+    .other {
+      width: 750px;
+      height: 200px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="other">
+    other
+  </div>
+  <div class="relative">
+    relative:
+    Do NOT remove the element from the document flow
+  </div>
+  <div class="other">
+    other
+  </div>
+
+
+</body>
+
+</html>

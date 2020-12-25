@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position: Sticky
+  </title>
+  <style>
+    .sticky {
+      position: sticky;
+      width: 350px;
+      height: 360px;
+      background-color: red;
+      top: 0; /*trigger*/
+      left: 100px;
+    }
+
+    .other {
+      width: 750px;
+      height: 400px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="other">
+  </div>
+  <div class="other">
+  </div>
+  <div class="sticky">
+    sticky: A sticky element toggles between relative and fixed,
+    depending on the scroll position.
+    It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+  </div>
+  <div class="other">
+  </div>
+  <div class="other">
+  </div>
+  <div class="other">
+  </div>
+  <div class="other">
+  </div>
+</body>
+
+</html>

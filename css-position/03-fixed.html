@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position: Fixed
+  </title>
+  <style>
+    .fixed {
+      position: fixed;
+      width: 350px;
+      height: 360px;
+      background-color: red;
+      left: 80px;
+      right: 10px;
+      top: 100px;
+    }
+
+    .other {
+      width: 750px;
+      height: 500px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="other">
+    other
+  </div>
+  <div class="other">
+    other
+  </div>
+  <div class="other">
+    other
+  </div>
+  <div class="fixed">
+    Fixed:
+    Remove the element from docuemnt flow.
+
+    is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. 
+    
+    The top, right, bottom, and left properties are used to position the element.
+
+  </div>
+  <div class="other">
+    other
+  </div>
+  <div class="other">
+    other
+  </div>
+  <div class="other">
+    other
+  </div>
+</body>
+
+</html>
