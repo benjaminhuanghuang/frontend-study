@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="solution.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #container {
+            width: 960px;
+            margin: 50px auto;
+        }
+
+        #nav {
+            font-weight: 300;
+            font-size: 15px;
+        }
+
+        #nav ul {
+            background: #cfcfcf;
+            height: 40px;
+            list-style: none;
+        }
+
+        #nav > li > ul {
+            position: absolute;
+        }
+
+        #nav li a {
+            background: #cfcfcf;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            line-height: 40px;
+            padding: 0px 25px;
+        }
+
+        #nav li a:hover {
+            text-decoration: none;
+            background: #915fa6;
+            color: #FFFFFF;
+        }
+
+
+
+        #nav li ul {
+            background: #000000;
+            display: none;
+            height: auto;
+            width: 100%;
+        }
+
+        #nav li li{
+            width: 100%;
+        }
+
+        #nav li ul a {
+            text-align: left;
+            display: block;
+            height: 40px;
+            padding: 0px 10px 0px 25px;
+        }
+        ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #1bc2a2;
+}
+ul li {
+  display: block;
+  position: relative;
+  float: left;
+  background: #1bc2a2;
+}
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Menu 1</a>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Submenu</a>
+                        <ul>
+                            <li><a href="#">Link1</a></li>
+                            <li><a href="#">Link2</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Menu 2</a>
+                <ul>
+                    <li><a href="#">Link1</a></li>
+                    <li><a href="#">Submenu1</a>
+                        <ul>
+                            <li><a href="#">Link1</a></li>
+                            <li><a href="#">Link2</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">Link2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Link 2</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+/* start writing all your rules starting with #nav selector */
+/* background color for fourth element: #ffd9b3; */
+#nav {}
+
+/* show main menu in line*/
+#nav ul li {
+    width: 20%;
+    display:block;
+    float:left;
+    position:relative;
+}
+
+/* display sub menu*/
+#nav ul> li:hover > ul {
+    display:block;
+    position: absolute
+}
+/*
+#nav ul ul li {
+    display: block;
+
+}
+
+#nav li:hover li {
+    float:none;
+}*/
+
+/* 3 level menu*/
+#nav ul ul ul {
+    position:absolute;
+    top:0;
+    left:100%
+}
+
+/*set background color for 4th menu*/
+#nav>ul>li:nth-child(4)>a {
+    background-color: #ffd9b3;
+}
+
+
