@@ -1,0 +1,43 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.visualCalcEditor {
+    display: flex;
+    min-height: 100vh;  /*Relative to 100% of the height of the viewport*/
+    flex-direction: column;
+    margin: 0;
+}
+
+
+.formulaBar {
+  
+}
+
+.detailVisual{
+    flex: 1;
+}
+
+
+.formulaBarButtons {
+    min-width: 76px;
+    flex: 0;
+    height: 28px;
+    box-sizing: border-box;
+    border: 1px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: var(--body-color);
+}
+
+.formulaBarEditorContainer {
+}
+
+.formulaBarEditor {
+
+
+}
