@@ -1,0 +1,31 @@
+.visual {
+    display: block;
+    width: 400px;
+    height: 300px;
+    border: 1px solid blue;
+}
+
+.message-banner {
+    background-color: #EEEDED;
+    display: flex;
+}
+
+.message-banner-icon {
+    width: 16px;
+    background-color: blueviolet;
+}
+
+.message-banner-text-container {
+    border: 1px solid red;
+    display: flex;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.overflowContainer {
+    display: block;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
