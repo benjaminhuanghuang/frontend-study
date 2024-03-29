@@ -1,5 +1,11 @@
 ```scss
-.tab-title {
+
+.tabs {
+
+}
+
+
+.tab {
   &:not(:last-child) {
     margin-right: 10px;
   }
