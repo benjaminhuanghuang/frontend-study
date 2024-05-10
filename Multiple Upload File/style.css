@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family-Montserrat:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #585858;
+    background: hsl (235deg 100% 93% / 50%);
+}
+
+ul {
+    List-style: none;
+}
+
+/**/
+.container {
+    max-width: 500px;
+    width: 100%;
+    margin: 10em auto;
+    padding: 0 20px;
+}
+
+.file-upload {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 7em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    background-color: hsl(235deg 100% 99%);
+    box-shadow: hsl(235deg 100% 78% / 30%) 0 25px 50px -12px;
+}
+
+.file-upload input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.file-upload .icon {
+    position: relative;
+    margin-bottom: 5em;
+}
+
+.file-upload .icon ion-icon {
+    font-size: 4em;
+    color: hsla(235, 100%, 95%, 1);
+    z-index: 1;
+    position: relative;
+}
+
+/* round cycle*/
+.file-upload .icon::before,
+.file-upload .icon::after {
+    content: '';
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    border: 3px solid hsla(235, 100%, 78%, 1);
+    background-color: hsla(235, 100%, 95%, 1);
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+.file-upload .icon::after {
+    border:0 ;
+    transform: scale(2.5);
+    z-index: 0;
+    background-color: hsla(235, 100%, 95%, 1);
+}
+
+/*drag drop*/
+.file-upload h3 {
+   font-weight: 400;
+   font-size: 1.5em;
+   color: hsla(235, 100%, 78%, 1);
+}
+.file-upload button {
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    color: white;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: Linear-gradient(135deg, hsla(235, 100%, 78%, 1) 0%, hsla(222, 100%, 67%, 1) 100%);
+    box-shadow: hsla(235, 100%, 67%, .5) 0 4px 18px;
+}
+
+.file-upload button ion-icon {
+    font-size: 1.5em;
+    transform: rotate(45deg);
+}
+
+/*hover effect on the button*/
+.file-upload:hover button{
+    transform: translateY(-5px);
+}
