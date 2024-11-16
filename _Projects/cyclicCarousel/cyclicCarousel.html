@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carousel-container {
+            width: 500px;
+            height: 300px;
+            margin: 20px auto;
+            position: relative;
+            /* Remove this line with test */
+            overflow: hidden;
+            outline: 5px solid black;
+        }
+
+        .carousel-list {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            z-index: -1;
+        }
+
+        carousel-item {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f1f1f1;
+            font-size: 2rem;
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            /* Center vertically */
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent black background */
+            color: white;
+            /* Button icon or text color */
+            border: none;
+            border-radius: 50%;
+            /* Circular buttons */
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 10;
+            /* Ensure it's above the slides */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .carousel-arrow.carousel-arrow-left {
+            left: 10px;
+        }
+
+        /* Position the next button on the right */
+        .carousel-arrow.carousel-arrow-right {
+            right: 10px;
+        }
+
+        .carousel-arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+            transform: translateY(-50%) scale(1.1); /* Slightly enlarge the button */
+            color: #ffdd57; /* Change icon color to yellow (optional) */
+        }
+        .indictor {
+            display: flex;
+            justify-content: center; /* Center the indicators horizontally */
+            align-items: center;
+            gap: 10px; /* Space between the indicators */
+            position: absolute;
+            bottom: 20px; /* Position at the bottom of the carousel */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Offset by half the width for perfect centering */
+            z-index: 10; /* Ensure it's above the carousel content */
+        }
+        .indictor span {
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+
+        .indictor span.active {
+            /* Highlight color for the active indicator */
+            background-color: #333;
+            /* Slightly enlarge the active dot */
+            transform: scale(1.2);
+        }
+
+        /* Hover effect for better interactivity */
+        .indictor span:hover {
+            background-color: #555;
+            /* Slightly darker color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel-container">
+        <div class="carousel-list">
+            <div class="carousel-item">1</div>
+            <div class="carousel-item">2</div>
+            <div class="carousel-item">3</div>
+        </div>
+        <div class="carousel-arrow carousel-arrow-left">a</div>
+        <div class="carousel-arrow carousel-arrow-right">b</div>
+        <div class="indictor">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <script src="cyclicCarousel.js"></script>
+</body>
+
+</html>
