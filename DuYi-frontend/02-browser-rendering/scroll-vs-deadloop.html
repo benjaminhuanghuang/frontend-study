@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    scroll happens at the drawing phase on compositor thread,
+    dead loop happens at the layout phase
+
+    So the dead loop does not block the scroll rendering
+
+    <button id="btn">Dead loop</button>
+
+    <script>
+        function delay(duration) {
+            const start = Date.now();
+            while (Date.now() - start < duration) { }
+        }
+
+        btn.onclick = function () {
+            delay(5000);
+        }
+    </script>
+</body>
+
+</html>

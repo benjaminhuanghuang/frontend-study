@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+            margin: 30px;
+        }
+
+        .ball1 {
+            animation: move1 1s alternate infinite ease-in-out;
+        }
+
+        .ball2 {
+            position: fixed;
+            left: 0;
+            animation: move2 1s alternate infinite ease-in-out;
+        }
+
+        @keyframes move1 {
+            to {
+                transform: translate(100px);
+            }
+        }
+
+        @keyframes move2 {
+            to {
+                left: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Click dead loop button will block the ball2 moving </h1>
+    <p>
+        change left will cause reflow on main thread.
+        transform will cause drawing on compositor thread.
+    </p>
+    <button id="btn">Dead loop</button>
+    <div class="ball ball1"></div>
+    <div class="ball ball2"></div>
+    <script>
+        function delay(duration) {
+            const start = Date.now();
+            while (Date.now() - start < duration) { }
+        }
+
+        btn.onclick = function () {
+            delay(5000);
+        }
+    </script>
+
+</body>
+
+</html>
