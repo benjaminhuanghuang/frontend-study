@@ -1,5 +1,6 @@
 const list = document.querySelector(".list");
 let sourceNode;
+let flip;
 
 // 延迟改变被拖拽的item的样式，避免跟随鼠标的item的样式被改变
 list.ondragstart = (e) => {
@@ -7,6 +8,7 @@ list.ondragstart = (e) => {
     e.target.classList.add("moving");
   }, 0);
   sourceNode = e.target;
+  flip = new flip(list.children, -0.5);
 };
 
 list.ondragover = (e) => {
@@ -30,6 +32,7 @@ list.ondragenter = (e) => {
     // above the sourceNode
     list.insertBefore(sourceNode, e.target);
   }
+  flip.play();
 };
 
 list.ondragend = (e) => {
