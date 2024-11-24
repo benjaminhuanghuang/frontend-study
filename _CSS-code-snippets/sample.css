@@ -1,0 +1,36 @@
+/*
+    select the parent element of the focused input
+*/
+.form-block:focus-within {
+    background: #eee;
+}
+
+
+/*
+    Add * for the required fields
+*/
+.label span:has(+ input[data-required])::after {
+    content: '*';
+    color: red;
+}
+
+
+/*
+First letter
+*/
+.content::first-letter {
+    font-size: 4em;
+    text-transform: uppercase;
+    float: left;
+    line-height: 1;
+    margin-right: 10px;
+}
+
+/*
+    selection
+*/
+
+.content::selection {
+    background: #f00;
+    color: #fff;
+}

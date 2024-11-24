@@ -1,4 +1,4 @@
-var user = {
+   var user = {
   name: '袁进',
   birth: '2002-5-7',
 };
