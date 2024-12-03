@@ -164,16 +164,19 @@ textarea {
   font: inherit;
 }
 
-input, textarea{
+input,
+textarea {
   width: 100%;
 }
 
 button {
   cursor: pointer;
 }
+
 textarea {
   resize: none;
 }
+
 html {
   font-size: var(--base-font-size);
   font-family: var(--font-secondary);
@@ -190,7 +193,7 @@ body {
   #TYPOGRAPHY
 \*-----------------------------------*/
 .display-large {
- font-family: var(--font-primary);
+  font-family: var(--font-primary);
   font-size: var(--display-large);
   font-weight: var(--weight-regular);
   line-height: 64px;
@@ -203,6 +206,7 @@ body {
   font-weight: var(--weight-regular);
   line-height: 52px;
 }
+
 .display-small {
   font-family: var(--font-primary);
   font-size: var(--display-small);
@@ -253,6 +257,7 @@ body {
   line-height: 20px;
   letter-spacing: 0.1px;
 }
+
 .body-large {
   font-size: var(--body-large);
   font-weight: var(--weight-regular);
@@ -264,8 +269,9 @@ body {
   font-size: var(--body-medium);
   font-weight: var(--weight-regular);
   line-height: 20px;
-  letter-spacing: 0.25px;  
+  letter-spacing: 0.25px;
 }
+
 .body-small {
   font-size: var(--body-small);
   font-weight: var(--weight-regular);
@@ -279,6 +285,7 @@ body {
   line-height: 20px;
   letter-spacing: 0.5px;
 }
+
 .label-medium {
   font-size: var(--label-medium);
   font-weight: var(--weight-medium);
@@ -297,8 +304,39 @@ body {
   #REUSED STYLE
 \*-----------------------------------*/
 
+.material-symbols-outlined {
+  width: 1em;
+  height: 1em;
+  display: block;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
 
+/* targets an element if it has a direct child with the .state-layer class. */
+:has(> .state-layer) {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
 
+.state-layer {
+  position: absolute;
+  inset: 0;
+  background-color: var(--state-layer-bg);
+  transition: var(--motion-duration-short-1) var(--motion-easing-linear);
+  opacity: 0;
+}
+
+:has(> .state-layer):hover .state-layer {
+  opacity: 0.08;
+}
+
+:has(> .state-layer):is(:focus, :focus-visible, :active) .state-layer {
+  opacity: 0.12;
+}
 
 
 /*-----------------------------------*\
@@ -308,7 +346,12 @@ body {
 /**
  * BUTTON
  */
-
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+}
 
 /**
  * TAB
