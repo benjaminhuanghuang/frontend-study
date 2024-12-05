@@ -1,0 +1,31 @@
+/*
+repeat(count, size);
+auto-fit: Automatically adjusts the number of columns to fit the container’s width. 
+          Columns are added or removed based on the available space.
+
+The minmax() function defines the minimum and maximum size of a column.
+    150px (minimum): Each column will be at least 150px wide.
+    1fr (maximum): Each column will expand proportionally to fill the remaining space, 
+                   using the CSS fr (fractional unit)
+
+Key Differences Between auto-fit and auto-fill
+    auto-fit: Removes empty columns and collapses gaps.
+    auto-fill: Maintains the grid structure, even if some columns are empty.
+*/
+.resume-bottom-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+}
+
+
+
+
+/*
+
+*/
+.article {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}

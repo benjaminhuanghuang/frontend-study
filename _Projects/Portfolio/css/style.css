@@ -361,6 +361,11 @@ body {
 .tab-content:not(.active) {
   display: none;
 }
+
+.section-title {
+  margin-block-end: 16px;
+}
+
 /*-----------------------------------*\
   #COMPONENT
 \*-----------------------------------*/
@@ -373,6 +378,19 @@ body {
   height: 40px;
   display: grid;
   place-items: center;
+}
+
+.btn {
+  height: 40px;
+  display: grid;
+  place-items: center;
+  padding-inline: 24px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary);
+  color: var(--on-primary);
+  font-weight: var(--weight-medium);
+  overflow: hidden;
+  --state-layer-bg: var(--on-primary);
 }
 
 /**
@@ -456,6 +474,8 @@ body {
   background-color: var(--surface-container-low);
   border-radius: var(--radius-medium);
   padding: 16px;
+  display: grid;
+  gap: 16px;
   --state-layer-bg: var(--on-surface);
 }
 
@@ -479,10 +499,28 @@ body {
 /**
  * INPUT FIELD
  */
+.input-field,
+textarea {
+  color: var(--on-surface);
+  padding: 13px 16px;
+  box-shadow: inset 0 0 0 1px var(--outline);
+  border-radius: var(--radius-small);
+  outline: none;
+  transition: box-shadow var(--motion-duration-short-1) var(--motion-easing-linear);
+}
 
+.textarea {
+  height: 120px;
+  padding: 16px;
+}
 
+:where(.input-field, .textarea)::placeholder {
+  color: var(--on-surface-variant);
+}
 
-
+:where(.input-field, .textarea):focus {
+  box-shadow: inset 0 0 0 2px var(--primary);
+}
 
 /*-----------------------------------*\
   #TOP BAR
@@ -616,23 +654,126 @@ body {
 /*-----------------------------------*\
   #RESUME
 \*-----------------------------------*/
+.resume-tab .list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-block-end: 28px;
+}
 
+.resume-card {
+  display: grid;
+  gap: 4px;
+}
 
+.resume-card .card-subtitle {
+  color: var(--primary);
+}
 
+.resume-card .card-text {
+  color: var(--on-surface-variant);
+}
 
+.resume-bottom-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.resume-bottom-item {
+  background-color: var(--surface-container);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: var(--radius-small);
+}
+
+.resume-bottom-item .icon {
+  height: 28px;
+}
 
 /*-----------------------------------*\
   #CONTACT
 \*-----------------------------------*/
+.contact-tab {
+  padding-block-end: 0;
+}
 
+.contact-tab .container {
+  padding-block-end: 24px;
+}
 
+.contact-info,
+.contact-info-list {
+  display: grid;
+  gap: 12px;
+}
 
+.contact-info-list {
+  padding-block-end: 12px;
+  border-block-end: 1px solid var(--outline-variant);
+}
 
+.context-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-info .icon-box {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: var(--on-surface-variant);
+}
+
+.info-content {
+  display: grid;
+  gap: 4px;
+}
+
+.info-title {
+  color: var(--on-surface-variant);
+  opacity: 0.6;
+}
+
+.info-text {
+  color: var(--on-surface-variant);
+}
+
+.social-list {
+  display: flex;
+  gap: 12px;
+}
+
+.social-item {
+  padding: 12px;
+}
+
+.input-wrapper {
+  margin-block-start: 16px;
+  display: grid;
+  gap: 10;
+}
+
+.contact-form {
+  background-color: var(--surface-container);
+  padding: 16px;
+  margin-block-end: 16px;
+  border-radius: var(--radius-medium);
+}
 
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
-
+.footer .container {
+  text-align: center;
+  padding: 16px;
+  border-block-start: 1px solid var(--outline-variant);
+}
 
 
 
@@ -640,3 +781,53 @@ body {
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+/*
+ responsive design for larger than 768px
+ */
+@media (min-width: 768px) {
+  .article {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    align-items: flex-start;
+  }
+
+  .about-card,
+  .primary-tabs {
+    position: sticky;
+    top: 64px;
+  }
+
+  .primary-tabs {
+    z-index: 2;
+  }
+
+  /* HERO */
+  .hero .container {
+    grid-template-columns: 0.2fr 1fr;
+  }
+}
+
+/*
+ responsive design for larger than 1200px
+ */
+@media (min-width: 1200px) {
+
+  .container,
+  .article {
+    max-width: 1128px;
+    margin-inline: auto;
+  }
+
+  .about-card {
+    margin-inline: 8px;
+  }
+
+  .contact-tab .container {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 0.6fr  1fr;
+    gap: 24px;
+  }
+}
