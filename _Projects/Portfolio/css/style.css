@@ -18,19 +18,19 @@
   --outline-variant-light: hsl(270, 11%, 79%);
 
   /* dark theme */
-  --background-dark: hs1(260, 14%, 8%);
+  --background-dark: hsl(260, 14%, 8%);
   --on-background-dark: hsl(280, 17%, 90%);
 
-  --surface-dark: @hsl(260, 14%, 8%);
+  --surface-dark: hsl(260, 14%, 8%);
   --on-surface-dark: hsl(280, 17%, 90%);
   --on-surface-variant-dark: hsl(270, 11%, 79%);
-  --surface-container-low-dark: @hsl(264, 8%, 12%);
+  --surface-container-low-dark: hsl(264, 8%, 12%);
   --surface-container-dark: Ohsl(257, 10%, 14%);
-  --surface-bright-dark: @hsl(270, 5%, 23%);
+  --surface-bright-dark: hsl(270, 5%, 23%);
   --primary-dark: hsl(258, 100%, 87%);
   --on-primary-dark: @hsl(259, 58%, 28%);
   --outline-dark: hsl(264, 5%, 58%);
-  --outline-variant-dark: @hsl(264, 7%, 29%);
+  --outline-variant-dark: hsl(264, 7%, 29%);
 
   /* TYPOGRAPHY */
   /* font family */
@@ -338,6 +338,25 @@ body {
   opacity: 0.12;
 }
 
+.section {
+  padding-block: var(--section-padding);
+}
+
+.container {
+  padding-block: 16px;
+}
+
+.img-holer {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /*-----------------------------------*\
   #COMPONENT
@@ -361,7 +380,24 @@ body {
 /**
  * CHIP
  */
+.chip {
+  height: 32px;
+  max-width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 16px;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius-small);
+  background-color: var(--surface);
+  color: var(--on-surface-variant);
+  --state-layer-bg: var(--on-surface-variant);
+}
 
+.chip .material-symbols-outlined {
+  font-size: 1.8rem;
+}
 
 /**
  * CARD
@@ -379,27 +415,118 @@ body {
 /*-----------------------------------*\
   #TOP BAR
 \*-----------------------------------*/
-.topbar{
-  
+.topbar {
+  background-color: var(--background);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--top-bar-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 16px;
+  z-index: 4;
 }
 
+[data-theme="dark"] .logo .light,
+[data-theme="light"] .logo .dark {
+  display: none;
+}
 
+[data-theme="dark"] .logo .dark,
+[data-theme="light"] .logo .light {
+  display: block;
+}
 
+.theme-btn {
+  color: var(--on-surface-variant);
+  --state-layer-bg: var(--on-surface-variant);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .theme-btn .light,
+[data-theme="light"] .theme-btn .dark {
+  display: none;
+}
+
+[data-theme="dark"] .theme-btn .dark,
+[data-theme="light"] .theme-btn .light {
+  display: block;
+}
 
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
 
+.hero {
+  padding-block-start: calc(var(--top-bar-height) + 24px);
+}
 
+.hero .container {
+  display: grid;
+  align-items: center;
+  gap: 24px;
+}
 
+.hero-banner {
+  width: 240px;
+  border-radius: var(--radius-circle);
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero .section-subtitle {
+  color: var(--on-surface-variant);
+}
+
+.hero .section-text {
+  margin-block: 5px 16px;
+  color: var(--on-surface-variant);
+}
+
+.hero .btn-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
 
 /*-----------------------------------*\
   #ABOUT CARD
 \*-----------------------------------*/
+.about-card {
+  background-color: var(--surface-container-low);
+  color: var(--on-surface-variant);
+  margin-inline: 16px;
+  padding: 16px;
+  margin-block-start: 24px;
+  border-radius: var(--radius-large);
+}
 
+.about-card .card-title {
+  color: var(--on-surface);
+}
 
+.about-card .card-text {
+  margin-block: 12px;
+  padding-block: 12px;
+  border-block: 1px solid var(--outline-variant);
+}
 
+.about-list {
+  display: grid;
+  gap: 12px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 
 
 /*-----------------------------------*\

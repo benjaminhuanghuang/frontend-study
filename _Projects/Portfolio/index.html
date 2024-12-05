@@ -1,4 +1,4 @@
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -23,7 +23,7 @@
 <body>
     <!-- Top bar -->
 
-    <head class="topbar">
+    <header class="topbar">
         <a href="#" class="logo">
             <img src="./assets/images/Logo_dark.png" alt="Devfolio" width="145" height="32" class="dark">
             <img src="./assets/images/Logo_light.png" alt="Devfolio" width="145" height="32" class="light">
@@ -32,7 +32,67 @@
             <span class="material-symbols-outlined dark" aria-hidden="true"> dark_mode</span>
             <span class="material-symbols-outlined light" aria-hidden="true"> light_mode</span>
         </button>
-    </head>
+    </header>
+
+    <main>
+        <article>
+            <!-- Hero  -->
+            <section class="section hero">
+                <div class="container">
+                    <figure class="hero-banner img-holer" style="--width:240; --height:240">
+                        <img src="./assets/images/profile.png" width="240" height="240" alt="name" class="img-cover">
+                    </figure>
+                    <div class="hero-content">
+                        <span class="label-large section-subtitle">Software engineer</span>
+                        <h1 class="display-small">John Doe</h1>
+                        <p class="body-large section-text">
+                            I am a software engineer with a passion for web development. I have experience in building
+                            web applications using modern technologies.
+                        </p>
+                        <div class="btn-wrapper">
+                            <a href="mailto:aaa.gmail.com" class="chip">
+                                <span class="material-symbols-outlined" aria-hidden="true">mail </span>
+                                <span class="label-large">aaa@gmail.com</span>
+                                <div class="state-alyer"></div>
+                            </a>
+                            <a href="tel:+11111111" class="chip">
+                                <span class="material-symbols-outlined" aria-hidden="true">mail </span>
+                                <span class="label-large">tel:+11111111</span>
+                                <div class="state-alyer"></div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- main content -->
+             <div class="article">
+                <div class="about-card">
+                    <h2 class="card-title title-medium">
+                       About 
+                    </h2>
+                    <p class="body-medium card-text">
+                        I am a software engineer with a passion for web development. I have experience in building web applications using modern technologies.
+                    </p>
+                    <ul class="about-list">
+                        <li class="list-item">
+                            <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                            <span class="label-medium">US</span>
+                        </li>
+                        <li class="list-item">
+                            <span class="material-symbols-outlined" aria-hidden="true">work</span>
+                            <span class="label-medium">Developer</span>
+                        </li>
+                        <li class="list-item">
+                            <span class="material-symbols-outlined" aria-hidden="true">captive_portal</span>
+                            <a href="http://example.com" class="label-medium">http://example.com</a>
+                        </li>
+                    </ul>
+                </div>
+             </div>
+        </article>
+    </main>
     <!-- custom js -->
     <script src="./js/script.js"></script>
 </body>
