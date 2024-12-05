@@ -67,13 +67,14 @@
             </section>
 
             <!-- main content -->
-             <div class="article">
+            <div class="article">
                 <div class="about-card">
                     <h2 class="card-title title-medium">
-                       About 
+                        About
                     </h2>
                     <p class="body-medium card-text">
-                        I am a software engineer with a passion for web development. I have experience in building web applications using modern technologies.
+                        I am a software engineer with a passion for web development. I have experience in building web
+                        applications using modern technologies.
                     </p>
                     <ul class="about-list">
                         <li class="list-item">
@@ -90,7 +91,83 @@
                         </li>
                     </ul>
                 </div>
-             </div>
+                <!-- Primary tabs -->
+                <div class="primary-tabs">
+                    <button class="tab-btn active" data-tab-btn="project">
+                        <span class="tab-text title-small">Projects</span>
+                        <div class="state-layer"></div>
+                    </button>
+                    <button class="tab-btn" data-tab-btn="resume">
+                        <span class="tab-text title-small">Resume</span>
+                        <div class="state-layer"></div>
+                    </button>
+                    <button class="tab-btn" data-tab-btn="contact">
+                        <span class="tab-text title-small">Contact</span>
+                        <div class="state-layer"></div>
+                    </button>
+                </div>
+
+                <!-- Project -->
+                <section class="section tab-content active" data-tab-content="project">
+                    <div class="container">
+                        <div class="project-list">
+                            <div class="card">
+                                <figure class="card-banner img-holder" style="--width:334; --height:180;">
+                                    <img src="./assets/images/project-1.png" width="334" height="180"
+                                        alt="Stock media App" class="img-cover" />
+                                </figure>
+                                <div class="card-content">
+                                    <span class="label-large card-subtitle">Web App</span>
+                                    <h3 class="title-large card-title">Stock media Ap</h3>
+                                </div>
+                                <a href="#" class="state-layer"></a>
+                            </div>
+                            <div class="card ">
+                                <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                                    <img src="./assets/images/project-2.png" width="334" height="180"
+                                        alt="Stock media App" class="img-cover" />
+                                </figure>
+                                <div class="card-content">
+                                    <span class="label-large  card-subtitle">Web App</span>
+                                    <h3 class="title-large card-title">Stock media Ap</h3>
+                                </div>
+                                <a href="#" class="state-layer"></a>
+                            </div>
+                            <div class="card">
+                                <figure class="card-banner img-holder" style="--width: 334; --height: 180;">
+                                    <img src="./assets/images/project-3.png" width="334" height="180"
+                                        alt="Stock media App" class="img-cover" />
+                                </figure>
+                                <div class="card-content">
+                                    <span class="label-large  card-subtitle">Web App</span>
+                                    <h3 class="title-large card-title">Stock media Ap</h3>
+                                </div>
+                                <a href="#" class="state-layer"></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Resume -->
+                <section class="section tab-content resume-tab active" data-tab-content="resume">
+                    <div class="container">
+                        <h2 class="section-title title-small">
+                            Experience
+                        </h2>
+                        <u class="list">
+                            <li class="resume-item">
+                                <div class="resume-card">
+                                    <p class="body-large">
+                                        Software Engineer, Tech Company
+                                    </p>
+                                </div>
+                            </li>
+                        </u>
+                    </div>
+                </section>
+
+                <!-- Contact -->
+            </div>
         </article>
     </main>
     <!-- custom js -->

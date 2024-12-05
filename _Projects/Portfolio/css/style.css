@@ -6,7 +6,7 @@
   /* light theme */
   --background-light: hsl(293, 100%, 98%);
   --on-background-light: hsl(264, 8%, 12%);
-  --surface-light: hsl (293, 100%, 988);
+  --surface-light: hsl(293, 100%, 98%);
   --on-surface-light: hsl(264, 8%, 12%);
   --on-surface-variant-light: hsl(264, 7%, 29%);
   --surface-container-low-light: hsl(278, 44%, 96%);
@@ -14,7 +14,7 @@
   --surface-bright-light: hsl(293, 100%, 98%);
   --primary-Light: hsl(256, 34%, 48%);
   --on-primary-Light: hsl(0, 0%, 100%);
-  --outline-light: hsl(270, 48, 474);
+  --outline-light: hsl(270, 48, 47%);
   --outline-variant-light: hsl(270, 11%, 79%);
 
   /* dark theme */
@@ -25,10 +25,10 @@
   --on-surface-dark: hsl(280, 17%, 90%);
   --on-surface-variant-dark: hsl(270, 11%, 79%);
   --surface-container-low-dark: hsl(264, 8%, 12%);
-  --surface-container-dark: Ohsl(257, 10%, 14%);
+  --surface-container-dark: hsl(257, 10%, 14%);
   --surface-bright-dark: hsl(270, 5%, 23%);
   --primary-dark: hsl(258, 100%, 87%);
-  --on-primary-dark: @hsl(259, 58%, 28%);
+  --on-primary-dark: hsl(259, 58%, 28%);
   --outline-dark: hsl(264, 5%, 58%);
   --outline-variant-dark: hsl(264, 7%, 29%);
 
@@ -346,7 +346,7 @@ body {
   padding-block: 16px;
 }
 
-.img-holer {
+.img-holder {
   aspect-ratio: var(--width) / var(--height);
   background-color: transparent;
   overflow: hidden;
@@ -358,6 +358,9 @@ body {
   object-fit: cover;
 }
 
+.tab-content:not(.active) {
+  display: none;
+}
 /*-----------------------------------*\
   #COMPONENT
 \*-----------------------------------*/
@@ -376,6 +379,52 @@ body {
  * TAB
  */
 
+.primary-tabs {
+  background-color: var(--background);
+  margin-block-start: 24px;
+  margin-inline: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  border-block-end: 1px solid var(--outline-variant);
+}
+
+.tab-btn {
+  height: 48px;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  background-color: var(-- surface);
+  color: var(--on-surface-variant);
+  --state-layer-bg: var(--on-surface-variant);
+}
+
+.tab-btn.active {
+  color: var(--primary);
+  --state-layer-bg: var(--primary);
+}
+
+.tab-text {
+  position: relative;
+  height: 48px;
+  line-height: 48px;
+}
+
+.tab-text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background-color: var(--primary);
+  opacity: 0;
+}
+
+.tab-btn.active .tab-text::after {
+  opacity: 1;
+}
 
 /**
  * CHIP
@@ -403,6 +452,29 @@ body {
  * CARD
  */
 
+.card {
+  background-color: var(--surface-container-low);
+  border-radius: var(--radius-medium);
+  padding: 16px;
+  --state-layer-bg: var(--on-surface);
+}
+
+.card-banner {
+  border-radius: var(--radius-medium);
+}
+
+.card-content {
+  display: grid;
+  gap: 4px;
+}
+
+.card-subtitle {
+  color: var(--on-surface-variant);
+}
+
+.card-title {
+  color: var(--on-surface);
+}
 
 /**
  * INPUT FIELD
@@ -533,7 +605,11 @@ body {
   #PROJECT
 \*-----------------------------------*/
 
-
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
 
 
 
