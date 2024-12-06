@@ -715,7 +715,7 @@ textarea {
   border-block-end: 1px solid var(--outline-variant);
 }
 
-.context-info-item {
+.contact-info-item {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -756,7 +756,7 @@ textarea {
 .input-wrapper {
   margin-block-start: 16px;
   display: grid;
-  gap: 10;
+  gap: 10px;
 }
 
 .contact-form {
