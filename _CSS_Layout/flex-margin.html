@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-color: darkblue;
+            border-width: 2px;
+            border-style: solid;
+        }
+        .container {
+            display: flex;
+            background-color: lightgray;
+            margin-top: 10px;
+            width: 80vw;
+            padding: 4px;
+        }
+
+        .container1 {
+            height: 150px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container2 {
+            height: 150px;
+        }
+       
+        .container5 {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item:nth-child(3n+1) {
+           background: #eb6a5f;
+           border-color: #832219;
+        }
+        .item:nth-child(3n+3) {
+           background: #e1c454;
+           border-color: #202020;
+        }
+        /* Set margin for each item in container5 */
+        .container6 {
+            flex-wrap: wrap;
+        }
+        .container6 .item {
+            --n: 7;   /* number of items in a row */
+            --space: calc(100% / var(--n) - 50px);  /* space for each item - space of each item*/
+            --m: calc(var(--space) /2);  /* margin for each item */
+            margin: 10px var(--m);
+        }
+    </style>
+</head>
+
+<body>
+    <p>use justify-content and align-items on the container</p>
+    <div class="container container1">
+        <div class="item"></div>
+    </div>
+    <p>use margin:auto on the item. margin:auto means use all unused space</p>
+    <div class="container container2">
+        <div class="item" style="margin:auto"></div>
+    </div>
+    <p> margin-left:auto on the item will push the item to the right side of the container</p>
+    <div class="container">
+        <div class="item" style="margin-left:auto"></div>
+    </div>
+    
+    <p> margin-left:auto and margin-right:auto on the item will center item </p>
+    <div class="container">
+        <div class="item" style="margin-left:auto; margin-right: auto;"></div>
+    </div>
+    <p> margin-left:auto on the last item</p>
+    <div class="container container2">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item" style="margin-left:auto"></div>
+    </div>
+    <p> margin-left:auto on the 3th item</p>
+    <div class="container container2">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item" style="margin-left:auto"></div>
+        <div class="item"></div>
+        
+    </div>
+    <p> margin-left:auto; and margin-right: auto; on the 3th item. Center it within the remaining space.</p>
+    <div class="container container2">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item" style="margin-left:auto;margin-right: auto;"></div>
+        <div class="item"></div>
+        
+    </div>
+    <p> Use justify-content: space-between;</p>
+    <div class="container container5">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        
+    </div>
+    <p> Set margin for each item.</p>
+    <div class="container container6">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>
