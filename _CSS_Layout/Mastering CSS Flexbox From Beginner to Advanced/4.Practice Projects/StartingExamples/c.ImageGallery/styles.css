@@ -1,0 +1,17 @@
+/* BASE STYLES */
+:root {
+    --lightgray: #f4f4f4;
+    --gray: #cccccc;
+    --darkgray: #333333;
+    --mediumGray: #666666;
+    --cyan: #00FFFF;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--lightgray);
+}
+
+

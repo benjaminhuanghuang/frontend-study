@@ -1,0 +1,18 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blue: #371259;
+    --darkblue: #2d0f4a;
+    --fuchsia: #FF6AFF;
+    --orange: #FF7E00;
+    --yellow: #FFD500;
+    --cyan: #00FFFF;
+    --lavender: #E6E6FA;
+    --teal: #008080;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }

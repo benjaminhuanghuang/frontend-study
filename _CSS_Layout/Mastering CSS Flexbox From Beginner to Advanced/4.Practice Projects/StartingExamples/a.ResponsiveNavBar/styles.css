@@ -1,0 +1,12 @@
+/* BASE STYLES */
+:root {
+    --gray: #333333;
+    --white: #ffffff;
+    --yellow: #FFD500;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+

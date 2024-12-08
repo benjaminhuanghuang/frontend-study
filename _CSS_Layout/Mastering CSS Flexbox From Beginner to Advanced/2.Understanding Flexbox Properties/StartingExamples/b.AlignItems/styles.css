@@ -1,0 +1,18 @@
+/* BASE STYLES */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blue:#371259;
+    --fuchsia: #FF6AFF;
+    --orange: #FF7E00;
+    --yellow: #FFD500;
+    --cyan: #00FFFF;
+    --lavender: #E6E6FA;
+    --teal: #008080;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--blue);
+}

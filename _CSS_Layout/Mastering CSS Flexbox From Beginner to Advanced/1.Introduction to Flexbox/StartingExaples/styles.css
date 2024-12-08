@@ -1,0 +1,41 @@
+/* BASE STYLES */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blue:#371259;
+    --fuchsia: #FF6AFF;
+    --orange: #FF7E00;
+    --yellow: #FFD500;
+    --cyan: #00FFFF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    background-color: var(--blue);
+}
+  
+.container {
+   
+}
+
+.item {
+ 
+}
+
+.item-1 {
+  
+}
+
+.nested-item {
+    background-color: var(--cyan);
+    color: var(--black);
+    padding: 30px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+  

@@ -1,0 +1,69 @@
+/* BASE STYLES */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blue:#371259;
+    --fuchsia: #FF6AFF;
+    --orange: #FF7E00;
+    --yellow: #FFD500;
+    --cyan: #00FFFF;
+    --lavender: #E6E6FA;
+    --teal: #008080;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--blue);
+}
+.container {
+    margin: 30px;
+    border: 3px solid var(--orange);
+    display: flex;
+}
+.item {
+    padding: 5px;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    line-height: 70px;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+.flex-start .item {
+    background-color: var(--fuchsia);
+}
+.flex-end .item {
+    background-color: var(--orange);
+}
+.center .item {
+    background-color: var(--yellow);
+}
+.space-between .item {
+    background-color: var(--cyan);
+}
+.space-around .item {
+    background-color: var(--lavender);
+}
+.space-evenly .item {
+    background-color: var(--teal);
+}
+.flex-start {
+    justify-content: flex-start;
+}
+.flex-end {
+    justify-content: flex-end;
+}
+.center {
+    justify-content: center;
+}
+.space-between {
+    justify-content: space-between;
+}
+.space-around {
+    justify-content: space-around;
+}
+.space-evenly {
+    justify-content: space-evenly;
+}

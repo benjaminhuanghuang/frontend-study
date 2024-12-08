@@ -1,0 +1,39 @@
+/* BASE STYLES */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blue:#371259;
+    --fuchsia: #FF6AFF;
+    --orange: #FF7E00;
+    --yellow: #FFD500;
+    --cyan: #00FFFF;
+    --lavender: #E6E6FA;
+    --teal: #008080;
+}
+
+.container {
+    display: flex;
+    margin: 30px;
+    border: 3px solid var(--orange);
+    width: 1000px;
+    height: 500px;
+    flex-flow: column wrap-reverse;
+}
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    font-weight: bold;
+    font-size: 2em;
+}
+.item-1 {
+    background-color: var(--fuchsia);
+}
+.item-2 {
+    background-color: var(--orange);
+}
+.item-3 {
+    background-color: var(--yellow);
+}
