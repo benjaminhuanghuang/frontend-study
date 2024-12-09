@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Sample</title>
+    <style>
+        header,
+        nav,
+        main,
+        article,
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .layout {
+            display: grid;
+            gap: 4px;
+            grid-template-rows: 40px 40px auto 60px 60px 40px;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                'header' 'sidebar' 'main'
+                'widget'
+                'statistics'
+                'footer';
+            height: 100vh;
+        }
+
+        @media (min-width: 480px) {
+            .layout {
+                display: grid;
+                grid-template-rows: 40px auto 80px 40px;
+                grid-template-columns: 160px auto auto;
+                grid-template-areas: 'header header header'
+                    'sidebar main main'
+                    'sidebar widget statistics'
+                    'footer footer footer';
+            }
+        }
+
+        header {
+            grid-area: header;
+            background: #c08bfd;
+        }
+
+        nav {
+            grid-area:
+                sidebar;
+            background: #F5C95E;
+        }
+
+        main {
+            grid-area: main;
+            background:
+                #B9BF99;
+        }
+
+        article {
+            grid-area: widget;
+            background: #c0f7c0;
+        }
+
+        .widget {
+            grid-area: widget;
+            background: #f7c0f7;
+        }
+
+        .statistics {
+            grid-area:
+                statistics;
+            background: #A1C9FA
+        }
+
+        footer {
+            grid-area:
+                footer;
+            background: #c08bfd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="layout">
+        <header>
+            Header
+        </header>
+        <nav>Sidebar</nav>
+        <main>
+            Main
+        </main>
+        <article class="widget">widget</article>
+        <article class="statistics">statistics</article>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>
