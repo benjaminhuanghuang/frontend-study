@@ -1,0 +1,16 @@
+{
+  "name": "tailwind-github",
+  "version": "1.0.0",
+  "description": "https://www.bilibili.com/video/BV1rf4y1g7r5?",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
+  }
+}

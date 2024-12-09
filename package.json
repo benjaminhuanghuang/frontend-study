@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/benjaminhuanghuang/css-study/issues"
   },
-  "homepage": "https://github.com/benjaminhuanghuang/css-study#readme"
+  "homepage": "https://github.com/benjaminhuanghuang/css-study#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.16"
+  }
 }
