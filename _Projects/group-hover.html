@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            position: relative;
+        }
+
+        #child {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        /* #child:hover {
+            background-color: red !important;
+        } */
+        /* Group hover effect */
+        #container:hover #child {
+        background-color: yellow; /* Change background color of children */
+        color: black; /* Change text color of children */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="child"></div>
+    </div>
+</body>
+</html>
