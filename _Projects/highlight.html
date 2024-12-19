@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syntax Highlighting Editor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .editor-container {
+      position: relative;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .highlight {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      color: transparent;
+      background: none;
+      pointer-events: none;
+    }
+    .textarea {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      resize: none;
+      overflow: auto;
+      background: none;
+      border: none;
+      font: inherit;
+      color: #000;
+      z-index: 1;
+      opacity: 0;
+  caret-color: black;
+    }
+    .keyword { color: blue; font-weight: bold; }
+    .string { color: green; }
+    .comment { color: gray; font-style: italic; }
+  </style>
+</head>
+<body>
+  <div class="editor-container" style="width: 500px; height: 300px;">
+    <pre class="highlight"></pre>
+    <textarea class="textarea"></textarea>
+  </div>
+
+  <script>
+    const keywords = ["const", "let", "var", "function", "if", "else", "return"];
+    const textarea = document.querySelector('.textarea');
+    const highlight = document.querySelector('.highlight');
+
+    textarea.addEventListener('input', () => {
+      const text = textarea.value;
+      const highlightedText = text
+        .replace(/\/\/.*/g, '<span class="comment">$&</span>') // Single-line comments
+        .replace(/(["'])(?:(?=(\\?))\2.)*?\1/g, '<span class="string">$&</span>') // Strings
+        .replace(new RegExp(`\\b(${keywords.join('|')})\\b`, 'g'), '<span class="keyword">$1</span>'); // Keywords
+      highlight.innerHTML = highlightedText;
+    });
+
+    textarea.addEventListener('scroll', () => {
+      highlight.scrollTop = textarea.scrollTop;
+      highlight.scrollLeft = textarea.scrollLeft;
+    });
+  </script>
+</body>
+</html>
