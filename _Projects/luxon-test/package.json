@@ -1,0 +1,16 @@
+{
+  "name": "luxon-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "luxon": "^3.4.4",
+    "vitest": "^2.1.8"
+  }
+}
