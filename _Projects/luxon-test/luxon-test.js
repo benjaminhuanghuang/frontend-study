@@ -1,5 +1,6 @@
 import { DateTime } from "luxon";
 // https://github.com/moment/luxon/blob/master/docs/formatting.md
+// ref luxon formatting: https://moment.github.io/luxon/#/formatting
 
 console.log(DateTime.local()); // local time
 
