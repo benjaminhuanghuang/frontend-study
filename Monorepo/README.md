@@ -1,6 +1,22 @@
 # Monorepo
 
-## Workspace management
+- Workspace management
+  - pnpm
+  - yarn
 
-- pnpm
-- yarn
+- Project structure
+  - Dependency management
+
+- Bundle
+  - vite
+  - webpack
+  - rollup
+  - esbuild
+  - tsup
+
+- CI/CD
+
+- Publish
+
+- Monitor
+
