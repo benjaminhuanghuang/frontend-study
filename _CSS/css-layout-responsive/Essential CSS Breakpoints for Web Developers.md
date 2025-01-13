@@ -1,3 +1,5 @@
+# Essential CSS Breakpoints for Web Developers
+
 - Mobile: Up to 480px
 
 - Extra small devices: 481px to 767px
@@ -9,6 +11,7 @@
 - Desktops: 1200px to 1919px
 
 - Extra large screens: 1920px and up
+
 ```css
 
 /* Mobile */
