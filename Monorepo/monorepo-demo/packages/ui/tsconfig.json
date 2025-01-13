@@ -1,24 +1,10 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "outDir": "./dist",
-        "rootDir": "./src",
-        "strict": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "noEmit": true,
-        "isolatedModules": true,
-        "jsx": "react",
-        "declaration": true,
-        "declarationMap": true,
-        "sourceMap": true,
-        "resolveJsonModule": true,
-        "baseUrl": "./",
-        "paths": {
-            "@monorepo-demo/ui/*": ["src/*"]
-        }
+        "jsx": "react-jsx",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "declaration": true
     },
     "include": ["src"],
 }
