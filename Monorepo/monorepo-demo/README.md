@@ -5,3 +5,9 @@
 ```sh
 pnpm create vite dashboard --template react-ts
 ```
+
+## use library in workspace
+
+```json
+   "@mymono/ui": "workspace:*"
+```

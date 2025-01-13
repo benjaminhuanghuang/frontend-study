@@ -12,7 +12,7 @@
   - webpack
   - rollup
   - esbuild
-  - tsup
+  - tsup, for library
 
 - CI/CD
 

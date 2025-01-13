@@ -1,5 +1,13 @@
 {
     "name": "@mymono/ui",
+    "scripts": {
+        "dev": "tsup --watch",
+        "build": "tsup"
+    },
+    "devDependencies": {
+        "tsup": "8.3.5",
+        "typescript": "5.7.2"
+    },
     "peerDependencies": {
         "react": "^19.0.0",
         "react-dom": "^19.0.0"

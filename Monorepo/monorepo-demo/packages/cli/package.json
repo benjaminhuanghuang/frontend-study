@@ -1,3 +1,11 @@
 {
-    "name": "@mymono/cli"
+  "name": "@mymono/cli",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "tsup": "8.3.5",
+    "typescript": "5.7.2"
+  }
 }
