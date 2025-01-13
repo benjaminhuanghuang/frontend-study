@@ -1,13 +1,14 @@
 {
   "name": "@mymono/cli",
   "bin": {
-    "mymonoCli":"./dist/index.js"
+    "mymonoCli": "./dist/index.js"
   },
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup"
   },
   "devDependencies": {
+    "@types/node": "^22.10.5",
     "tsup": "8.3.5",
     "typescript": "5.7.2"
   }
